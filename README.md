@@ -57,7 +57,4 @@ protocol ProtocolMethod {
 protocol ProtocolMethod2 {
     func method2()
 }
-
-protocol InheritedProtocol : ProtocolMethod, ProtocolMethod2 {
-}
 ```
