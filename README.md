@@ -44,7 +44,7 @@ protocol Vehicle {
 }
 
 protocol TestModel: Vehicle {
-    var logoToughness: String { get set}
+    var logo: String { get set}
 }
 ```
 
