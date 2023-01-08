@@ -1,8 +1,8 @@
 # Protocols
 
 
-**Protocols as a parameter type**
-
+**Protocols as a parameter type:**
+```
 protocol ProtocolName {
     var property: String { get set}
 }
@@ -10,9 +10,10 @@ func protocolFunction(param: ProtocolName) {
     print("\(param.property)")
 }
 
+```
 
-**Using property of protocol in structs**
-
+**Using property of protocol in structs:**
+```
 protocol ProtocolProperty {
     var propertyOfProtocol: String { get set }
 }
@@ -30,3 +31,33 @@ struct Struct2 : ProtocolProperty {
         print("\(param.propertyOfProtocol)")
     }
 }
+```
+
+
+**Protocol inheritance:**
+```
+protocol Vehicle {
+    var wheel:     Int { get set }
+    var door :     Int { get set }
+    var window:    Int { get set }
+    var capacity:  Int { get set }
+}
+
+protocol TestModel: Vehicle {
+    var logoToughness: String { get set}
+}
+```
+
+**Protocol method: **
+```
+protocol ProtocolMethod {
+    func method()
+}
+
+protocol ProtocolMethod2 {
+    func method2()
+}
+
+protocol InheritedProtocol : ProtocolMethod, ProtocolMethod2 {
+}
+```
